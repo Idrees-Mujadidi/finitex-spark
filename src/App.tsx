@@ -7,12 +7,15 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Portfolio from "./pages/Portfolio";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+
+// Lazy load page components for better performance and code splitting
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -26,14 +29,20 @@ const App = () => (
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+              <Suspense fallback={
+                <div className="flex items-center justify-center min-h-[60vh]">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+                </div>
+              }>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
             </main>
             <Footer />
             <WhatsAppButton />
