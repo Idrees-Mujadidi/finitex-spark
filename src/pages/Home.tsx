@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Code, Smartphone, Palette, TrendingUp, CheckCircle, Users } from "lucide-react";
-import HeroBackground from "@/components/HeroBackground";
 
 export default function Home() {
   const features = [
@@ -38,9 +37,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10">
-        <HeroBackground />
-        <div className="absolute inset-0 bg-gradient-hero opacity-5 dark:opacity-10"></div>
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-hero opacity-10 dark:opacity-20"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
