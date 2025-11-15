@@ -85,7 +85,7 @@ export default function Portfolio() {
       <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Our <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Portfolio</span>
+            Our <span className="bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent">Portfolio</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Explore our latest projects and success stories
@@ -102,7 +102,7 @@ export default function Portfolio() {
                 key={category}
                 variant={filter === category ? "default" : "outline"}
                 onClick={() => setFilter(category)}
-                className={filter === category ? "bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0 capitalize" : "border-border/50 hover:bg-secondary capitalize"}
+                className={filter === category ? "bg-gradient-to-r from-primary via-blue-500 to-blue-600 hover:opacity-90 text-white border-0 capitalize" : "border-border/50 hover:bg-secondary capitalize"}
               >
                 {category}
               </Button>
@@ -164,19 +164,19 @@ export default function Portfolio() {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">500+</div>
               <div className="text-muted-foreground">Projects Delivered</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">300+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">300+</div>
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">98%</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">98%</div>
               <div className="text-muted-foreground">Satisfaction Rate</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">24/7</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">24/7</div>
               <div className="text-muted-foreground">Support Available</div>
             </div>
           </div>

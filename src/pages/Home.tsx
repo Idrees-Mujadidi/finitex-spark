@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
               Transform Your Ideas Into
-              <span className="block mt-2 bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent">
                 Digital Reality
               </span>
             </h1>
@@ -58,7 +58,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 shadow-lg shadow-primary/50 text-white border-0">
+                <Button size="lg" className="bg-gradient-to-r from-primary via-blue-500 to-blue-600 hover:opacity-90 shadow-lg shadow-primary/50 text-white border-0">
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
