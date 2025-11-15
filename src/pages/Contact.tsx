@@ -74,7 +74,7 @@ export default function Contact() {
       <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Get In <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Have a project in mind? Let's talk about it
@@ -109,7 +109,7 @@ export default function Contact() {
                 </Card>
               ))}
 
-              <Card className="bg-gradient-to-br from-primary to-purple-600 text-white border-0">
+              <Card className="bg-gradient-to-br from-primary via-blue-600 to-blue-700 text-white border-0">
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-bold">Working Hours</h3>
                   <div className="space-y-2 text-sm">
@@ -208,7 +208,7 @@ export default function Contact() {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full md:w-auto bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0"
+                      className="w-full md:w-auto bg-gradient-to-r from-primary via-blue-500 to-blue-600 hover:opacity-90 text-white border-0"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}

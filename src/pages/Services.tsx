@@ -61,7 +61,7 @@ export default function Services() {
       <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Our <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Comprehensive digital solutions to help your business thrive in the digital age
@@ -140,7 +140,7 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0">
+              <Button size="lg" className="bg-gradient-to-r from-primary via-blue-500 to-blue-600 hover:opacity-90 text-white border-0">
                 Contact Us
               </Button>
             </Link>

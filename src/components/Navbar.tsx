@@ -23,7 +23,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent">
               FiniteX
             </div>
           </Link>
@@ -45,7 +45,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link to="/contact">
-              <Button size="sm" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0">
+              <Button size="sm" className="bg-gradient-to-r from-primary via-blue-500 to-blue-600 hover:opacity-90 text-white border-0">
                 Contact
               </Button>
             </Link>

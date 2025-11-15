@@ -66,7 +66,7 @@ export default function About() {
       <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            About <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">FiniteX</span>
+            About <span className="bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent">FiniteX</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Building digital excellence since 2014
@@ -170,19 +170,19 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">10+</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">10+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div>
-              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">500+</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">500+</div>
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div>
-              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">50+</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">50+</div>
               <div className="text-muted-foreground">Team Members</div>
             </div>
             <div>
-              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">300+</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-blue-400 bg-clip-text text-transparent mb-2">300+</div>
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0">
+              <Button size="lg" className="bg-gradient-to-r from-primary via-blue-500 to-blue-600 hover:opacity-90 text-white border-0">
                 Get In Touch
               </Button>
             </Link>
