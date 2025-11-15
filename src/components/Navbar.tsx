@@ -18,38 +18,41 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-background/60 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-royal bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
               FiniteX
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center space-x-6">
+            {navItems.slice(0, -1).map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "px-4 py-2 rounded-md text-sm font-medium transition-colors",
+                  "text-sm font-medium transition-colors relative",
                   location.pathname === item.path
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "text-foreground after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-0.5 after:bg-primary"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
+            <Link to="/contact">
+              <Button size="sm" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0">
+                Contact
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="md:hidden flex items-center">
             <Button
               variant="ghost"
               size="icon"
@@ -64,7 +67,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl">
           <div className="container mx-auto px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link
@@ -72,10 +75,10 @@ export function Navbar() {
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "block px-4 py-3 rounded-md text-base font-medium transition-colors",
+                  "block px-4 py-3 rounded-lg text-base font-medium transition-colors",
                   location.pathname === item.path
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "bg-primary/10 text-primary border border-primary/20"
+                    : "text-foreground hover:bg-secondary"
                 )}
               >
                 {item.name}

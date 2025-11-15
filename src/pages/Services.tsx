@@ -58,10 +58,10 @@ export default function Services() {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Header */}
-      <section className="px-4 py-16 text-center">
+      <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Our <span className="bg-gradient-royal bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Comprehensive digital solutions to help your business thrive in the digital age
@@ -76,11 +76,11 @@ export default function Services() {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-royal transition-all duration-300 hover:-translate-y-1"
+                className="group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 bg-card/50 backdrop-blur-sm border-border/50"
               >
                 <CardHeader>
-                  <div className="mb-4 inline-flex p-4 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <service.icon className="h-8 w-8" />
+                  <div className="mb-4 inline-flex p-4 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
                   <CardDescription className="text-base">
@@ -104,7 +104,7 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="px-4 py-20 bg-muted/30">
+      <section className="px-4 py-20 border-y border-border/50">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">Our Process</h2>
@@ -140,12 +140,12 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0">
                 Contact Us
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-border/50 hover:bg-secondary">
                 View Portfolio
               </Button>
             </Link>
