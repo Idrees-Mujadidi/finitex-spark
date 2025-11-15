@@ -37,28 +37,34 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-10 dark:opacity-20"></div>
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-[90vh] flex items-center">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]"></div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+              <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-primary text-primary-foreground">New</span>
+              <span className="text-sm text-foreground">Innovative Digital Solutions</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
               Transform Your Ideas Into
-              <span className="block bg-gradient-royal bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent">
                 Digital Reality
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               We create innovative digital solutions that drive growth and deliver exceptional results for businesses worldwide.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-royal">
+                <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 shadow-lg shadow-primary/50 text-white border-0">
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/portfolio">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="border-border/50 hover:bg-secondary">
                   View Our Work
                 </Button>
               </Link>
@@ -68,12 +74,12 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-20 px-4 border-y border-border/50">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -96,13 +102,13 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="group hover:shadow-royal transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 bg-card/50 backdrop-blur-sm border-border/50">
                 <CardContent className="pt-6">
-                  <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <feature.icon className="h-6 w-6" />
+                  <div className="mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                    <feature.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}

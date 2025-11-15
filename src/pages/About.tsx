@@ -63,10 +63,10 @@ export default function About() {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Header */}
-      <section className="px-4 py-16 text-center">
+      <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            About <span className="bg-gradient-royal bg-clip-text text-transparent">FiniteX</span>
+            About <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">FiniteX</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Building digital excellence since 2014
@@ -77,7 +77,7 @@ export default function About() {
       {/* Story Section */}
       <section className="px-4 py-12">
         <div className="container mx-auto max-w-4xl">
-          <Card>
+          <Card className="bg-card/50 backdrop-blur-sm border-border/50">
             <CardContent className="p-8 md:p-12 space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">Our Story</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -103,7 +103,7 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="px-4 py-20 bg-muted/30">
+      <section className="px-4 py-20 border-y border-border/50">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">Our Values</h2>
@@ -113,10 +113,10 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="group hover:shadow-royal transition-all duration-300">
+              <Card key={index} className="group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 bg-card/50 backdrop-blur-sm border-border/50">
                 <CardContent className="p-8 text-center space-y-4">
-                  <div className="inline-flex p-4 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <value.icon className="h-8 w-8" />
+                  <div className="inline-flex p-4 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <value.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">{value.title}</h3>
                   <p className="text-muted-foreground">{value.description}</p>
@@ -138,7 +138,7 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="overflow-hidden group hover:shadow-royal transition-all duration-300">
+              <Card key={index} className="overflow-hidden group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 bg-card/50 backdrop-blur-sm border-border/50">
                 <div className="relative overflow-hidden aspect-square">
                   <img 
                     src={member.image} 
@@ -157,32 +157,33 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="px-4 py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto">
+      <section className="px-4 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-600/10 to-background"></div>
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               By The Numbers
             </h2>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-muted-foreground">
               Our achievements speak for themselves
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold mb-2">10+</div>
-              <div className="text-white/80">Years Experience</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">10+</div>
+              <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <div className="text-white/80">Projects Completed</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">500+</div>
+              <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-white/80">Team Members</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">50+</div>
+              <div className="text-muted-foreground">Team Members</div>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">300+</div>
-              <div className="text-white/80">Happy Clients</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">300+</div>
+              <div className="text-muted-foreground">Happy Clients</div>
             </div>
           </div>
         </div>
@@ -199,12 +200,12 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0">
                 Get In Touch
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-border/50 hover:bg-secondary">
                 View Our Work
               </Button>
             </Link>

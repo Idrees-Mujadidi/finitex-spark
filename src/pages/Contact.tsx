@@ -71,10 +71,10 @@ export default function Contact() {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Header */}
-      <section className="px-4 py-16 text-center">
+      <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Get In <span className="bg-gradient-royal bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Have a project in mind? Let's talk about it
@@ -89,11 +89,11 @@ export default function Contact() {
             {/* Contact Info Cards */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="group hover:shadow-royal transition-all duration-300">
+                <Card key={index} className="group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 bg-card/50 backdrop-blur-sm border-border/50">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        <info.icon className="h-6 w-6" />
+                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <info.icon className="h-6 w-6 text-primary" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold mb-1">{info.title}</h3>
@@ -109,7 +109,7 @@ export default function Contact() {
                 </Card>
               ))}
 
-              <Card className="bg-gradient-hero text-white border-0">
+              <Card className="bg-gradient-to-br from-primary to-purple-600 text-white border-0">
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-bold">Working Hours</h3>
                   <div className="space-y-2 text-sm">
@@ -132,7 +132,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card>
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
                 <CardHeader>
                   <CardTitle className="text-2xl">Send Us a Message</CardTitle>
                   <CardDescription>
@@ -208,7 +208,7 @@ export default function Contact() {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full md:w-auto"
+                      className="w-full md:w-auto bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}

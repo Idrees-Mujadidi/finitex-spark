@@ -82,10 +82,10 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Header */}
-      <section className="px-4 py-16 text-center">
+      <section className="px-4 py-20 text-center">
         <div className="container mx-auto max-w-4xl space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
-            Our <span className="bg-gradient-royal bg-clip-text text-transparent">Portfolio</span>
+            Our <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Portfolio</span>
           </h1>
           <p className="text-xl text-muted-foreground">
             Explore our latest projects and success stories
@@ -102,7 +102,7 @@ export default function Portfolio() {
                 key={category}
                 variant={filter === category ? "default" : "outline"}
                 onClick={() => setFilter(category)}
-                className="capitalize"
+                className={filter === category ? "bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white border-0 capitalize" : "border-border/50 hover:bg-secondary capitalize"}
               >
                 {category}
               </Button>
@@ -118,7 +118,7 @@ export default function Portfolio() {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={index} 
-                className="group overflow-hidden hover:shadow-royal transition-all duration-300"
+                className="group overflow-hidden hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 bg-card/50 backdrop-blur-sm border-border/50"
               >
                 <div className="relative overflow-hidden aspect-video">
                   <img 
@@ -126,13 +126,13 @@ export default function Portfolio() {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
                     <div className="flex gap-2">
-                      <Button size="sm" variant="secondary">
+                      <Button size="sm" className="bg-primary/90 hover:bg-primary text-white">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         View
                       </Button>
-                      <Button size="sm" variant="secondary">
+                      <Button size="sm" variant="outline" className="border-border/50">
                         <Code2 className="h-4 w-4" />
                       </Button>
                     </div>
@@ -147,7 +147,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="text-xs">
+                      <Badge key={tagIndex} variant="secondary" className="text-xs bg-primary/10 text-primary border-primary/20">
                         {tag}
                       </Badge>
                     ))}
@@ -160,23 +160,23 @@ export default function Portfolio() {
       </section>
 
       {/* Stats Section */}
-      <section className="px-4 py-20 bg-muted/30">
+      <section className="px-4 py-20 border-y border-border/50">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">500+</div>
               <div className="text-muted-foreground">Projects Delivered</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">300+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">300+</div>
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">98%</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">98%</div>
               <div className="text-muted-foreground">Satisfaction Rate</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent mb-2">24/7</div>
               <div className="text-muted-foreground">Support Available</div>
             </div>
           </div>
